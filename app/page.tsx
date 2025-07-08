@@ -95,7 +95,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           >
             <motion.h1
-              className="text-4xl sm:text-6xl font-extrabold tracking-tight text-rose_taupe-500 drop-shadow-xl mb-4"
+              className="text-4xl sm:text-6xl font-extrabold tracking-tight text-rose_taupe-500 drop-shadow-xl mb-4 [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
@@ -103,7 +103,7 @@ export default function HomePage() {
               Pressure Washing, Cleanouts & Yard Help
             </motion.h1>
             <motion.p
-              className="text-2xl text-rose_taupe-500 mb-6"
+              className="text-2xl font-bold text-rose_taupe-500 mb-6 [text-shadow:_-1px_-1px_0_#000,_1px_-1px_0_#000,_-1px_1px_0_#000,_1px_1px_0_#000]"
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
@@ -143,23 +143,11 @@ export default function HomePage() {
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Professional Home Services</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  We offer a range of services to keep your home looking its best
+                  We offer a comprehensive range of professional services to enhance your home
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-3">
-              <motion.div whileHover={{ scale: 1.04, boxShadow: '0 8px 32px #AD7A8033' }} whileTap={{ scale: 0.98 }}>
-                <ServiceCard
-                  icon={<Droplets className="h-10 w-10 text-old_rose-500 transition-transform duration-300 hover:scale-125" />}
-                  title="Pressure Washing"
-                  description="Driveways, patios, porches, fences, sidewalks, trash cans"
-                  details={[
-                    "Custom Rate: $0.15 per square foot",
-                    "Free quotes via satellite imaging",
-                    "In-person inspection for tough jobs",
-                  ]}
-                />
-              </motion.div>
               <motion.div whileHover={{ scale: 1.04, boxShadow: '0 8px 32px #AD7A8033' }} whileTap={{ scale: 0.98 }}>
                 <ServiceCard
                   icon={<Truck className="h-10 w-10 text-old_rose-500 transition-transform duration-300 hover:scale-125" />}
@@ -174,10 +162,51 @@ export default function HomePage() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.04, boxShadow: '0 8px 32px #AD7A8033' }} whileTap={{ scale: 0.98 }}>
                 <ServiceCard
+                  icon={<Droplets className="h-10 w-10 text-old_rose-500 transition-transform duration-300 hover:scale-125" />}
+                  title="Pressure Washing"
+                  description="Driveways, patios, porches, fences, sidewalks, trash cans"
+                  details={[
+                    "Custom Rate: $0.25 per square foot",
+                    "Free quotes via satellite imaging",
+                    "In-person inspection for tough jobs",
+                  ]}
+                  className="font-bold"
+                />
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.04, boxShadow: '0 8px 32px #AD7A8033' }} whileTap={{ scale: 0.98 }}>
+                <ServiceCard
                   icon={<Leaf className="h-10 w-10 text-old_rose-500 transition-transform duration-300 hover:scale-125" />}
                   title="Light Yard Work + Debris Removal"
                   description="Weed removal, sweeping, blowing, and cleanup"
                   details={["Haul away bagged yard waste", "Debris removal", "General yard cleanup"]}
+                />
+              </motion.div>
+            </div>
+            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
+              <motion.div whileHover={{ scale: 1.04, boxShadow: '0 8px 32px #AD7A8033' }} whileTap={{ scale: 0.98 }}>
+                <ServiceCard
+                  icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-10 w-10 text-old_rose-500 transition-transform duration-300 hover:scale-125"><path d="M20 12v8H4v-8"/><path d="m12 3-8 6h16l-8-6z"/></svg>}
+                  title="Roof Washing"
+                  description="Professional roof cleaning services"
+                  details={[
+                    "Custom quote after site inspection",
+                    "Safe and effective cleaning methods",
+                    "Extends roof life and improves appearance",
+                    "*Contact us for a custom quote after inspection",
+                  ]}
+                />
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.04, boxShadow: '0 8px 32px #AD7A8033' }} whileTap={{ scale: 0.98 }}>
+                <ServiceCard
+                  icon={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-10 w-10 text-old_rose-500 transition-transform duration-300 hover:scale-125"><path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M5 17H3v-6h18v6h-2"/><path d="M3 11l2-5h14l2 5"/><path d="M8 17h8"/></svg>}
+                  title="Car Detailing"
+                  description="Interior + Exterior Detailing Services"
+                  details={[
+                    "Custom quote based on vehicle size and condition",
+                    "Professional interior and exterior cleaning",
+                    "Paint protection and restoration available",
+                    "*Contact us for a custom quote after inspection",
+                  ]}
                 />
               </motion.div>
             </div>
@@ -236,7 +265,7 @@ export default function HomePage() {
             </div>
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-muted-foreground">
-                Custom projects like large patios, extra-long driveways, and fences are still available at $0.15/sq ft.
+                Custom projects like large patios, extra-long driveways, and fences are still available at $0.25/sq ft.
                 Contact us for a free quote!
               </p>
             </div>
@@ -258,7 +287,7 @@ export default function HomePage() {
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <h3 className="text-xl font-bold">Pressure Washing</h3>
-                    <p className="text-2xl font-bold text-primary mt-2">$0.15 per square foot</p>
+                    <p className="text-2xl font-bold text-primary mt-2">$0.25 per square foot</p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="h-5 w-5 text-rose_taupe-500" />
@@ -478,8 +507,9 @@ export default function HomePage() {
             <div className="space-y-4">
               <h3 className="font-medium">Contact Us</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Phone: (555) 123-4567</li>
-                <li>Email: info@blastbeyond.com</li>
+                <li>Phone: (479) 123-4567</li>
+                <li>Email: aiden.deshommes@gmail.com</li>
+                <li>Email: inisamade@gmail.com</li>
                 <li>Area Served: Fayetteville, Springdale, Bentonville, Rogers, and nearby NWA</li>
               </ul>
             </div>

@@ -6,11 +6,12 @@ interface ServiceCardProps {
   title: string
   description: string
   details: string[]
+  className?: string
 }
 
-export default function ServiceCard({ icon, title, description, details }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, description, details, className }: ServiceCardProps) {
   return (
-    <Card className="flex flex-col overflow-hidden">
+    <Card className={`flex flex-col overflow-hidden ${className || ''}`}>
       <CardHeader className="flex flex-row items-center gap-4 pb-2">
         <div className="text-primary">{icon}</div>
         <div className="grid gap-1">
