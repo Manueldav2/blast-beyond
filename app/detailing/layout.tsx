@@ -17,6 +17,23 @@ export const metadata: Metadata = {
   title: "Mobile Auto Detailing Tallahassee FL | Blast & Beyond LLC",
   description:
     "Professional mobile auto detailing in Tallahassee, FL. Interior details, exterior wash, ceramic coating & paint protection. We come to you — home, apartment, or workplace. Student discounts available for FAMU, FSU & TCC students.",
+  alternates: {
+    canonical: "/detailing",
+  },
+  openGraph: {
+    title: "Mobile Auto Detailing Tallahassee FL | Blast & Beyond LLC",
+    description:
+      "Professional mobile auto detailing in Tallahassee, FL by Blast & Beyond LLC. Interior & exterior detailing, ceramic coating, paint protection. Student discounts for FAMU, FSU & TCC.",
+    url: "https://blastnbeyond.com/detailing",
+    images: [
+      {
+        url: "/images/detailing/Ceramic_Coated_Honda_Passport.jpg",
+        width: 800,
+        height: 600,
+        alt: "Blast & Beyond LLC mobile auto detailing Tallahassee FL",
+      },
+    ],
+  },
 }
 
 const businessSchema = {
